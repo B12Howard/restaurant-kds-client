@@ -1,0 +1,189 @@
+@import '../../Styles/variables';
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: black;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+}
+
+.topnav {
+    height: 3rem;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topnav a {
+    cursor: pointer;
+    color: white;
+    padding: 0rem 1rem;
+    text-decoration: none;
+}
+
+.topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mobile-icon {
+    font-size: 2rem;
+}
+
+nav {
+    color: #fff;
+
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    display: block;
+    box-sizing: inherit;
+}
+
+@media only screen and (max-width: $small) {
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background-color: black;
+        height: 0;
+        width: 99vw;
+        opacity: 0;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .mobile-nav-list {
+        display: flex;
+
+        flex-direction: column;
+        top: 3rem;
+        z-index: -10;
+    }
+
+    .nav-list-item {
+        color: black !important;
+        text-align: center;
+        padding: 15px 36px !important;
+        border-bottom: solid 1px black;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-playlist-display {
+        left: 0.75% !important;
+        width: 98.5vw !important;
+    }
+}
+@media only screen and (max-width: $mobile) {
+    .nav-list {
+        width: 98vw;
+    }
+}
+@media only screen and (min-width: $small) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.show-mobile-nav-list {
+    opacity: 1;
+    top: 3.5rem;
+    height: 100%;
+    z-index: 10;
+}
+
+.bottomnav {
+    height: 100%;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomnav a {
+    color: white;
+    padding: 0rem 1rem;
+    text-decoration: none;
+}
+
+.bottomnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.playlist-display {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    left: 16%;
+    height: 0;
+    z-index: 10;
+    width: 68vw;
+    bottom: -4rem;
+    opacity: 0;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.show-playlist-display {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: black;
+    left: 16%;
+    opacity: 1;
+    bottom: -3.5rem;
+    height: 100%;
+    width: 68vw;
+    z-index: 10;
+}
+.paylist-item {
+    color: black !important;
+    text-align: center;
+    padding: 15px 36px !important;
+    border-bottom: solid 1px black;
+}
+
+.bottombar {
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 7%;
+}
+
+@media screen and (max-width: $small) {
+    .bottombar {
+        width: 96vw;
+    }
+}

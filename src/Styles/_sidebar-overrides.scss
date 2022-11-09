@@ -1,0 +1,49 @@
+// Only works when imports into index.scss not in the component style
+.side-nav,
+.sidenav {
+    color: black;
+    padding: 1rem !important;
+    z-index: -91 !important;
+}
+
+@media only screen and (max-width: $small) {
+    .nav-list {
+        background-image: $bgColor, url('../Assets/laura-cleffmann-9NeMqfxFFTE-unsplash-min.jpeg');
+    }
+}
+
+.playlist-display,
+.side-nav,
+.sidenav {
+    background-image: $bgColor, url('../Assets/laura-cleffmann-9NeMqfxFFTE-unsplash-min.jpeg');
+}
+.sidenav-overlay {
+    display: none;
+    z-index: -110 !important;
+}
+
+.sidenav-trigger {
+    z-index: 0 !important;
+}
+
+.sidebar {
+    top: 60px;
+    height: 100%;
+    width: 180px;
+    transition: 0.01s ease-in-out !important;
+}
+.close-sidebar {
+    margin-left: -175px;
+}
+.sidebar.open {
+    left: 0;
+}
+.open-sidebar {
+    margin-left: 0px;
+}
+
+@media only screen and (max-width: $small) {
+    .sidenav {
+        width: 100vw !important;
+    }
+}
